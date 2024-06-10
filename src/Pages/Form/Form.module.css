@@ -1,0 +1,336 @@
+.Form-main{
+    width:100%;
+    height: 100vh;
+   
+}
+.form-cnt{
+    display:flex;
+    width:100%;
+   gap:80px;
+   /* background-color: #4b9138; */
+   box-shadow: 0 0 3px 0 hsla(0, 0%, 60%, .5);
+    /* align-items: center;
+    justify-content: center; */
+
+}
+
+.page-left-main{
+    box-shadow: 0 0 4px 0 hsla(0, 0%, 64%, .5);
+    /* background-color: #e9e7e7; */
+    /* border:1px solid black; */
+    width:50%;
+}
+.page-left-cnt{
+    align-items: center;
+    justify-content: center;
+    transform: translate(4%,0);
+    padding:20px;
+}
+.psg-details{
+    
+  width:90%
+}
+.psg-details h4{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.psg-input{
+    box-shadow: 0 0 4px 0 hsla(0, 0%, 64%, .5);
+    padding:20px;
+}
+.psg-name span{
+    font-size: 1.5rem;
+    font-weight: 200;
+
+}
+.psg-name input{
+    width:70%;
+   
+    padding:6px;
+    border:0.5px solid rgb(206, 204, 204);
+    border-radius: 3px;
+}
+
+.psg-info{
+    
+    display:flex;
+   
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.seat-ul{
+    
+    display: flex;
+}
+.seat-ul ul{
+    display: flex;
+    align-items: center;
+}
+.seat-ul ul li{
+    list-style: none;
+    color:black;
+    font-size: 1.4rem;
+    align-items: center;
+}
+
+
+/* .psg-gender {
+   background-color: red;
+} */
+.psg-gender h4{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.gender-label{
+    display:flex;
+    gap:10px;
+    align-items: center;
+}
+.gender-label .male {
+    padding:10px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    
+}
+.male label {
+    font-size: 1.2rem;
+   font-weight: 200;
+}
+.female{
+    padding:10px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.female label{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.psg-age{
+    align-items: center;
+    justify-content: center;
+}
+
+.psg-age span{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-left: 5px;
+}
+.psg-age-input{
+    
+    padding:6px;
+   
+}
+.psg-age-input input{
+    padding:6px; 
+       border:0.5px solid rgb(206, 204, 204);
+    border-radius: 3px;
+}
+
+/* email from */
+.psg-contact{
+   padding-top: 20px;
+   width:90%
+}
+.psg-contact h4{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.psg-contact-input{
+    padding:20px;
+    box-shadow: 0 0 4px 0 hsla(0, 0%, 64%, .5);
+}
+.psg-email span{
+    font-size: 1.5rem;
+    font-weight: 200;
+
+}
+.psg-email input{
+    width:70%;
+    background-color: rgb(255, 255, 255);
+      padding:6.5px;
+    border:0.5px solid rgb(206, 204, 204);
+    border-radius: 3px;
+}
+.psg-phone-no{
+    margin-top: 20px;
+}
+.psg-phone-no span{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.psg-phone-no input{
+    width:30%;
+    background-color: rgb(255, 255, 255);
+   
+    padding:6.5px;
+    border:0.5px solid rgb(206, 204, 204);
+    border-radius: 3px;
+}
+/* .payment-details{
+    padding:20px;
+} */
+
+.payment-details h1{
+    font-weight: 400;
+}
+.pay-mode ul{
+display: flex;
+align-items: center;
+padding:20px;
+gap:100px;
+}
+.pay-mode  ul li{
+ font-size: 1.6rem;
+ list-style: none;
+}
+    
+.pay-mode ul li img{
+    font-size: 1.5rem;
+    width:55px;
+    object-fit: cover;
+}
+.pay-mode ul li img:hover{
+    transform: scale(1.1);
+    /* background-color: red; */
+}
+
+/* page Right */
+
+.page-right{
+    width:40%;
+
+}
+.page-right-cnt{
+    width:100%;
+}
+.travel-details-cnt{
+    padding:20px;
+}
+.travel-details-cnt h1{
+    font-weight: 400;
+}
+.travel-details{
+    background: linear-gradient(to bottom right, #FFD700, #FFFF00);
+ width:80%;
+ padding:20px;
+ border-radius: 20px;
+}
+.route-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.route-details  h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.time-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.time-details h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.shift-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shift-details h2{
+    font-size: 1.5rem;
+    font-weight: 400;;
+}
+.selected-seats-details{
+    display: flex;
+    justify-content: space-between;
+}
+.seats-choosen{
+    display: flex;
+    gap:10px;
+}
+.selected-seats-details h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.seats-choosen span{
+    font-size: 1.2rem;
+}
+.bus-choosen
+{
+    display: flex;
+    justify-content: space-between;
+}
+.bus-choosen h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* 
+payment css */
+
+.payment-details-cnt{
+    padding:20px;
+}
+/* .payment-details-cnt{
+    
+} */
+.payment-total-cnt{
+    background: linear-gradient(to bottom right, #FFD700, #FFFF00);
+    width:80%;
+    padding:20px;
+    border-radius: 20px;
+}
+.payment-cost{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.payment-cost h2{
+    font-size: 1.5rem;
+    font-weight: 400;;
+}
+.discount{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.discount h2{
+    font-size: 1.5rem;
+    font-weight: 400;;
+}
+.total-cost{
+    display:flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.total-cost h2{
+    font-size: 1.5rem;
+    font-weight: 400;;
+}
+.payment-details-cnt h1{
+    font-weight: 400;
+}
+.reserve-confirm {
+
+width:100%;
+align-items: center;
+justify-content: center;
+}
+.reserve-confirm button{
+    width:50%;
+    padding:15px;
+    transform: translate(40%,0);
+    background-color:#60BB47;
+    border:none;
+    color:white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.reserve-confirm button:hover{
+    background-color: #4b9138;
+}

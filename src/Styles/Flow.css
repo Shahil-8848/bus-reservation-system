@@ -1,0 +1,101 @@
+.reservation-form {
+    max-width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.route-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #3e3e3e;
+    padding: 30px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 10px;
+}
+
+.route-from, .route-to, .route-date-time {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    /* background-color: #393939; */
+}
+
+.route-from-detail, .route-to-detail {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.route-from-logo, .route-to-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.route-from-logo span, .route-to-logo span {
+    font-size: 1.8rem;
+    color: #F4E022;
+}
+
+.route-from-logo h4, .route-to-logo h4 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: white;
+    
+}
+
+.route-location, .route-destination, .route-date input {
+    background-color: azure;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    /* color:red; */
+    font-style: oblique;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.route-location, .route-destination {
+    width: 10rem;
+    padding:10px;
+    height: 39px; 
+   }
+.route-date input {
+    font-size: 1rem;
+}
+
+.routes-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.routes-search button {
+    width: 8vw;
+    padding: 10px;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 7px;
+    background-color:#FFC206;
+    font-style:inherit;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.routes-search button:hover {
+    background-color: #f3b807
+    /* font-style: oblique; */
+}
+
+/* .error select,
+.error input {
+  border: 2px solid red;
+} */
+

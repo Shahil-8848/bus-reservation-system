@@ -1,0 +1,137 @@
+body{
+    margin:0;
+}
+#login-page{
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100vh;
+  
+    
+    
+    
+
+}
+.login-banner{
+    /* border: 2px solid black; */
+    width:50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(131, 131, 119);
+    height:600px;
+    background-image: url('https://img.freepik.com/free-vector/organic-flat-people-business-training-illustration_23-2148912129.jpg?t=st=1715079110~exp=1715082710~hmac=6a841eebfb406e5b6500faa17b0f88a5c815fe6509183cd4cd7c14acc25c042d&w=740');
+
+   
+    object-fit: cover;
+
+    
+}
+.login-container {
+    width:30%;
+    height:600px;
+    gap:50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.login-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+
+.login-container .login-top .login-data {
+    display: flex;
+
+    flex-direction: column;
+    gap:50px;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+.input-username input{
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding:8px;
+    border:none;
+}
+.input-password input{
+    width:100%;
+border:none;
+    padding:8px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+/* 
+.login button{
+    width:210px;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    background-color: #1D24CA;
+    color:white;
+
+    
+}
+.login button:hover{
+    background-color: #191eb4;
+    color:aliceblue;
+
+} */
+.login-data div span{
+    font-size: 15px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+.login-below{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+}
+
+.login-container button{
+  appearance: button;
+  width:250px;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.login-container button:disabled {
+  cursor: default;
+}
+
+.login-container button:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}

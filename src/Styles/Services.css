@@ -1,0 +1,50 @@
+.services-page{
+    background-color:rgb(230, 230, 230);
+    height: 30vh;
+}
+.services-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:50px;
+    
+}
+.ticket{
+    padding:20px;
+  
+}
+.ticket span{
+    font-size: 3rem;
+    color:#FFC206;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    /* transform:translateX(50%); */
+    margin-left: 50px;
+    color:20px;
+}
+
+.reservation{
+    padding:20px;
+}
+.reservation span{
+    font-size: 3rem;
+    color:#FFC206;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    margin-left: 40px;
+    margin-left: 80px;
+}
+.secure-pay{
+    padding:20px;
+
+}
+.secure-pay span{
+    font-size: 3rem;
+    color:#FFC206;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-left: 60px;
+}
