@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { MdDelete } from "react-icons/md";
 
 import "../Booking/Booking.css";
 
@@ -21,22 +22,46 @@ const Booking = () => {
         if (result.code !== 200) {
           alert("Something needs to be fixed");
         } else {
-          setData(result.data); // Assuming the response has a `data` field containing the booking details
+          setData(result.data);
         }
       } catch (error) {
         console.error("Error fetching booking details:", error);
         alert("Failed to fetch booking details");
-
-        if (data.length === 0) {
-          return <h1 style={{ textAlign: "center" }}>No buses Available</h1>;
-        }
       }
     }
     bookingdetails();
   }, []);
 
   if (data.length === 0) {
-    return <h1 style={{ textAlign: "center" }}>makki chit</h1>;
+    return <h1 style={{ textAlign: "center" }}>No passengers available</h1>;
+  }
+
+  async function handlePsgDelete(passengerId) {
+    try {
+      const response = await fetch(
+        "http://localhost:8081/users/deletePassenger",
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            passengerid: passengerId,
+          }),
+        }
+      );
+      const result = await response.json();
+      if (result.msg === "Passenger deleted successfully") {
+        alert("Passenger deleted successfully");
+        // Remove the deleted passenger from the state
+        setData(data.filter((passenger) => passenger.id !== passengerId));
+      } else {
+        alert(result.msg);
+      }
+    } catch (error) {
+      console.error("Error deleting passenger:", error);
+      alert("Failed to delete passenger");
+    }
   }
 
   return (
@@ -46,8 +71,17 @@ const Booking = () => {
         <div className="booking-details-grid">
           {data.map((passenger, index) => (
             <div key={index} className="passenger-details">
+              <button
+                className="delete-btn"
+                onClick={() => handlePsgDelete(passenger.id)}
+              >
+                <MdDelete />
+              </button>
               <div className="detail">
                 <strong>Name:</strong> {passenger.passenger_name}
+              </div>
+              <div className="detail">
+                <strong>Id:</strong> {passenger.id}
               </div>
               <div className="detail">
                 <strong>Email:</strong> {passenger.email}
