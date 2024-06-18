@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bus-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .bus-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .bus-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bus-info h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .bus-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .bus-detail-item {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .bus-info button {
+    background:#FFC300;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .bus-info button:hover {
+    background:#e7b100;
+  }
+  
+  .seat-availability {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap:30px;
+    margin-top: 20px;
+  }
+  
+  .seat {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .seat.available {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .seat.unavailable {
+    background: #dc3545;
+    color: #fff;
+  }
+  .ul-tag1{
+    position: relative;
+  
+  }
+.driverSeat{
+  /* position: absolute; */
+  color:rgb(108, 108, 108);
+  font-size: 1.5rem;
+  margin-top: 35em;
+  height: 30px;
+  padding:10px ;
+
+  transform: rotate(3.142rad);
+}
+.reset-seats-cnt .reset{
+  background-color: rgb(255, 25, 25);
+  color:rgb(243, 243, 243);
+  font-size: 0.8rem;
+  border-radius: 4px;
+  padding:4px;
+  margin-bottom: 20px;
+  border:none;
+
+}
+.reset span{
+  padding-top: 85px;
+  /* color:#28a745; */
+
+  /* font-size: 1rem; */
+
+}
+.reset-seats-cnt .update{
+  background-color: rgb(0, 90, 154);
+  color:rgb(243, 243, 243);
+  font-size: 0.8rem;
+  border-radius: 4px;
+  padding:4px;
+
+  border:none;
+}

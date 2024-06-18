@@ -39,7 +39,7 @@ const Login = ({ setUserRole }) => {
         alert(isAdmin ? "Admin is logged in" : "User logged in successfully");
 
         // Navigate after setting the user role
-        navigate(isAdmin ? "/bookinginfo" : "/");
+        navigate(isAdmin ? "/admin" : "/");
       } else {
         alert(data.msg);
       }

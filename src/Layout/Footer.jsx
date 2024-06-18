@@ -9,17 +9,17 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section">
           <h4>About Us</h4>
-          <h6>
+          <h5>
             We are a company committed to providing the best service and
-            products to our customers.
-          </h6>
+            transportation to our passengers.
+          </h5>
         </div>
         <div className="footer-section">
           <h4>Contact Us</h4>
           <ul>
-            <li>Email: info@company.com</li>
+            <li>Email: rimjimtravels@gmail.com</li>
             <li>Phone: +123 456 7890</li>
-            <li>Address: 123 Street, City, Country</li>
+            <li>Address: Birtamode, Jhapa</li>
           </ul>
         </div>
         <div className="footer-section">

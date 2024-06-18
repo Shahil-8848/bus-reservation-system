@@ -8,17 +8,17 @@ const Services = () => {
     <div className="features-container">
       <div className="feature">
         <div className="feature-icon">{<IoTicket />}</div>
-        <h3>Easy Booking</h3>
+        <h4>Easy Booking</h4>
         <p>Book your bus tickets in just a few clicks.</p>
       </div>
       <div className="feature">
         <div className="feature-icon">{<IoTimeSharp />}</div>
-        <h3>Real-time Schedules</h3>
+        <h4>Real-time Schedules</h4>
         <p>View up-to-date bus schedules and arrival times.</p>
       </div>
       <div className="feature">
         <div className="feature-icon">{<RiSecurePaymentLine />}</div>
-        <h3>Secure Payments</h3>
+        <h4>Secure Payments</h4>
         <p>Pay for your tickets securely with your preferred method.</p>
       </div>
     </div>

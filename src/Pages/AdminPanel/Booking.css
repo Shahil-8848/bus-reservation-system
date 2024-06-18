@@ -35,12 +35,27 @@
   .passenger-details .detail strong {
     color: #555;
   }
+  .detailname{
+display: flex;
+align-items: center;
+justify-content: center;
+
+  }
+  .detailname h5{
+    font-size: 1rem;
+    margin-top: 2px;
+    margin-bottom: 20px;
+  }
   .delete-btn{
-    color:rgb(251, 0, 0);
-    font-size: 1.3rem;
+    color:rgb(246, 253, 255);
+    font-size: 1.2rem;
     border:none;
+    border-radius: 7px;
     position: absolute;
     right:0;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding:3px;
     top:0;
-    background-color: #f9f9f9;
+    background-color:  rgb(255, 25, 25);
   }

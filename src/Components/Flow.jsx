@@ -44,6 +44,8 @@ const Flow = () => {
               </option>
               <option value="Birtamode">Birtamode</option>
               <option value="location3">Damak</option>
+              <option value="location3">Charali</option>
+              <option value="location3">Dhulabari</option>
             </select>
           </div>
         </div>
@@ -79,7 +81,7 @@ const Flow = () => {
           </div>
         </div>
         <div className="routes-search">
-          <button onClick={handleOnSearch}>Search</button>
+          <button onClick={handleOnSearch}>SEARCH</button>
         </div>
       </div>
     </div>

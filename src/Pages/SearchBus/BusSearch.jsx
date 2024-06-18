@@ -213,6 +213,7 @@ const BusSearch = () => {
                                             .slice(0, 8)
                                             .map((seat, index) => (
                                               <li
+                                                className="user-seats"
                                                 key={index}
                                                 style={{
                                                   listStyle: "none",
@@ -220,7 +221,7 @@ const BusSearch = () => {
                                                     seat.isAvailable
                                                       ? selectedSeat.find(
                                                           (x) =>
-                                                            x.seatNumber === 
+                                                            x.seatNumber ===
                                                             seat.seatNumber
                                                         )
                                                         ? "silver"

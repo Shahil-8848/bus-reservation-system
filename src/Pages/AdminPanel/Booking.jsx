@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
-
-import "../Booking/Booking.css";
+import "./Booking.css";
+// import AdminPage from "./AdminPage";
+// import { Outlet } from "react-router-dom";
 
 const Booking = () => {
   const [data, setData] = useState([]);
@@ -32,9 +33,9 @@ const Booking = () => {
     bookingdetails();
   }, []);
 
-  if (data.length === 0) {
-    return <h1 style={{ textAlign: "center" }}>No passengers available</h1>;
-  }
+  // if (data.length === 0) {
+  //   return <h1 style={{ textAlign: "center" }}>No passengers available</h1>;
+  // }
 
   async function handlePsgDelete(passengerId) {
     try {
@@ -65,7 +66,7 @@ const Booking = () => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <div className="booking-main-page">
         <h1>Booking Details</h1>
         <div className="booking-details-grid">
@@ -77,12 +78,12 @@ const Booking = () => {
               >
                 <MdDelete />
               </button>
-              <div className="detail">
-                <strong>Name:</strong> {passenger.passenger_name}
+              <div className="detailname">
+                <h5>{passenger.passenger_name}</h5>
               </div>
-              <div className="detail">
+              {/* <div className="detail">
                 <strong>Id:</strong> {passenger.id}
-              </div>
+              </div> */}
               <div className="detail">
                 <strong>Email:</strong> {passenger.email}
               </div>
@@ -120,7 +121,7 @@ const Booking = () => {
           ))}
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

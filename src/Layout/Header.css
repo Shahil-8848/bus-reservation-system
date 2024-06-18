@@ -83,7 +83,7 @@
     display: inline-block;
    transform: translate(5%,65%);
     font-size: 1rem;
-    color: rgb(108, 108, 108);
+    color: rgb(177, 177, 177);
     cursor: pointer;
  
    
@@ -106,4 +106,76 @@
     border-radius: 50%;
     object-fit: cover;
   }
-  
+  /* Existing CSS... */
+/* Existing CSS... */
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #navbar {
+    padding: 10px;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-left .logo img {
+    height: 40px;
+  }
+
+  .nav-right {
+    width: auto;
+    margin-top: 0;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .login-div {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .login-link, .userlogged {
+    position: relative;
+    transform: none;
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+
+  .login-text {
+    position: relative;
+    transform: none;
+    width: auto;
+    margin-top: 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-left .logo img {
+    height: 35px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .login-link, .userlogged {
+    font-size: 1.2rem;
+  }
+
+  .login-text {
+    font-size: 0.9rem;
+  }
+}

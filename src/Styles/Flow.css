@@ -14,6 +14,7 @@
     padding: 30px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;
+    
 }
 
 .route-from, .route-to, .route-date-time {
@@ -84,7 +85,7 @@
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 7px;
-    background-color:#FFC300;;
+    background-color:#FFC300;
     font-style:inherit;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -99,3 +100,70 @@
   border: 2px solid red;
 } */
 
+/* Existing CSS... */
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .reservation-form {
+      padding: 15px;
+      flex-direction: column;
+    }
+  
+    .route-container {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    .route-from, .route-to, .route-date-time {
+      width: 100%;
+      box-shadow: none;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .route-from-detail, .route-to-detail {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .route-location, .route-destination {
+      width: 100%;
+      padding: 5px;
+      height: 35px;
+    }
+  
+    .route-date input {
+      width: 100%;
+    }
+  
+    .routes-search {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .routes-search button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .route-container {
+      padding: 10px;
+      gap: 15px;
+    }
+  
+    .route-from, .route-to, .route-date-time {
+      padding: 8px;
+    }
+  
+    .routes-search button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  

@@ -25,7 +25,11 @@
     color: #fff;
   }
   
-  .footer-section h6,
+  .footer-section h5{
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+  }
   .footer-section ul,
   .footer-section li {
     font-size: 14px;
@@ -73,3 +77,49 @@
     font-size: 14px;
   }
   
+  /* Existing CSS... */
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .footer-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-section h6,
+  .footer-section ul,
+  .footer-section li {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .footer-section ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section .social-icons a {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
+
+  .footer-bottom {
+    padding-top: 10px;
+  }
+
+  .footer-bottom p {
+    font-size: 1rem;
+  }
+}
