@@ -41,7 +41,7 @@
 
 .route-from-logo span, .route-to-logo span {
     font-size: 1.8rem;
-    color: #F4E022;
+    color: #FFC300;;
 }
 
 .route-from-logo h4, .route-to-logo h4 {
@@ -84,7 +84,7 @@
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 7px;
-    background-color:#FFC206;
+    background-color:#FFC300;;
     font-style:inherit;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }

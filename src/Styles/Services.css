@@ -1,50 +1,30 @@
-.services-page{
-    background: #f5f5f5;
-    height: 30vh;
-}
-.services-cnt{
+.features-container {
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    padding:50px;
-    
-}
-.ticket{
-    padding:20px;
+    align-items: flex-start; /* Align items to the top */
+    background-color: #f4f5f7;
+    padding: 20px;
+  }
   
-}
-.ticket span{
-    font-size: 3rem;
-    color:#FFC206;
-    align-items: center;
+  .feature {
     text-align: center;
-    padding: 10px;
-    /* transform:translateX(50%); */
-    margin-left: 50px;
-    color:20px;
-}
-
-.reservation{
-    padding:20px;
-}
-.reservation span{
-    font-size: 3rem;
-    color:#FFC206;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
-    margin-left: 40px;
-    margin-left: 80px;
-}
-.secure-pay{
-    padding:20px;
-
-}
-.secure-pay span{
-    font-size: 3rem;
-    color:#FFC206;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    margin-left: 60px;
-}
+    flex: 1; /* Allow each feature to grow and shrink equally */
+    margin: 0 10px; /* Add some margin between features */
+    max-width: 300px; /* Optional: limit the maximum width */
+  }
+  
+  .feature-icon {
+    font-size: 40px;
+    color: #FFC300;;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    color: #000;
+  }
+  
+  p {
+    color: #555;
+    text-align: center; /* Center the text */
+  }
+  

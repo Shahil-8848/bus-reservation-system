@@ -4,7 +4,7 @@ import React, { createContext, useState } from "react";
 export const UserNameContext = createContext();
 
 export const UserNameProvider = ({ children }) => {
-  const [userPageName, setPageName] = useState("Log-in");
+  const [userPageName, setPageName] = useState("Log-In");
   console.log(userPageName);
   return (
     <UserNameContext.Provider value={{ userPageName, setPageName }}>

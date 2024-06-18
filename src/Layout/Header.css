@@ -1,89 +1,109 @@
-#navbar{
-    width:100%;
-    height:10vh;
-    
-}
-.nav-left{
-    padding:20px;
-
-}
-.logo{
-    font-size: 1rem;
-    color:#FB6B6B
-    
-}
-.logo img{
-    width:70px;
-    height: 70px;
-    border-radius: 50%;
-}
-.nav-container{
+/* Header.css */
+#navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
   
-    
-    height:10vh;
-
-}
-.nav-right{
+  .nav-container {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    /* background-color: rgb(196, 196, 206); */
-    padding:30px;
-    gap:50px;
-}
-.nav-list{
-    display:flex;
-    
-    gap:50px;
-
-}
-.nav-list li{
+  }
+  
+  .nav-left .logo img {
+    height: 50px;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-list {
+    display: flex;
+    align-items: center;
     list-style: none;
-    font-size: 25px;
+    margin: 0;
+    padding-right:10px ;
+    gap:40px;
+  }
+  
+  /* .nav-list li {
+    margin-right: 20px;
+  } */
+  
+  .nav-link {
+    font-size: 27px;
     font-weight: 400;
-    cursor: pointer;
-    
-    
-}
-
-.nav-right .nav-list .notification{
-    color:#FB6B6B;
-}
-.login-div {
+    text-decoration: none;
+    color: black;
+    /* padding: 5px 10px; */
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #FFC206;
+  }
+  
+  .login-div {
     position: relative;
-  
-  }
-  
-  .login-div span a{
-    cursor: pointer;
+    display: flex;
     align-items: center;
-    justify-content: center;
-   
-    font-size: 1.7rem;
-    padding-right: 20px;
+    flex-direction: column; /* Change to column to stack the icon and text */
   }
-  .login-cnt span{
-     color:red;
+  
+  .login-cnt {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack the icon and text vertically */
+    margin-right: 10px;
   }
-  .login {
+  
+  .login-link {
+    display: flex;
     position: absolute;
-   font-weight: 500;
-    /* margin-right: 90px; */
-    font-size: 1rem;
-   margin-top: -5px;
-   transform: translateX(-18%);
-   /* background-color: aqua; */
-    color:rgb(49, 49, 49);
-    cursor: pointer;
-
-  
-    /* display: none; */
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center;
+    font-size: 2rem;
+    transform: translate(-10%,-55%);
+    /* margin-bottom: 5px; */
+    /* margin-top: 20px; */
+    color: #FFC206;
+    text-decoration: none;
   }
   
+  .login-text {
+    position: absolute;
+    width:50px;
+    display: inline-block;
+   transform: translate(5%,65%);
+    font-size: 1rem;
+    color: rgb(108, 108, 108);
+    cursor: pointer;
  
+   
+  }
+  .userlogged{
+    display: flex;
+    position: absolute;
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center;
+    font-size: 1.2rem;
+    transform: translate(-10%,-55%);
+    /* margin-bottom: 5px; */
+    /* margin-top: 20px; */
+    color: #FFC206;
+    text-decoration: none;
+  }
+  .userlogged img{
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
   
-
- 

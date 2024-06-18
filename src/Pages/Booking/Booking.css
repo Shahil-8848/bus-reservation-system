@@ -23,6 +23,7 @@
   .passenger-details {
     background: #f9f9f9;
     padding: 20px;
+    position: relative;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
@@ -35,8 +36,11 @@
     color: #555;
   }
   .delete-btn{
-    color:rgb(197, 3, 3);
-    font-size: 2rem;
+    color:rgb(251, 0, 0);
+    font-size: 1.3rem;
     border:none;
+    position: absolute;
+    right:0;
+    top:0;
     background-color: #f9f9f9;
   }
