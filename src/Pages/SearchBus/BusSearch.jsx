@@ -80,8 +80,8 @@ const BusSearch = () => {
     getBooking();
   }, [fromDest, toDestination]);
 
-  const openDialog = (index) => {
-    setShowDialog(index);
+  const openDialog = (rideID) => {
+    setShowDialog(rideID);
   };
 
   const closeDialog = () => {
@@ -154,8 +154,8 @@ const BusSearch = () => {
               </div>
             </div>
             <div className={style["available-bus-items"]}>
-              {data.map((e, r) => (
-                <div key={r} className={style["bus-items-container"]}>
+              {data.map((e) => (
+                <div key={e.rideID} className={style["bus-items-container"]}>
                   <ul>
                     <li className={style["bus-list"]}>
                       <div className={style["bus-items"]}>
@@ -187,13 +187,13 @@ const BusSearch = () => {
                             style={{ display: "block" }}
                             className={style["view-seats"]}
                           >
-                            <button onClick={() => openDialog(r)}>
+                            <button onClick={() => openDialog(e.rideID)}>
                               View seats
                             </button>
                           </div>
                         </div>
                       </div>
-                      {showDialog === r && (
+                      {showDialog === e.rideID && (
                         <dialog className={style["bus-dialog"]} open>
                           <div className={style["search-heading-cnt"]}>
                             <h3>Select your seat</h3>
@@ -341,7 +341,7 @@ const BusSearch = () => {
                                 <div className={style["pricing-details"]}>
                                   <div className={style["box-seats-pricing"]}>
                                     <h2>{e.busType}</h2>
-                                    <span>Fare: Rs {price}</span>
+                                    <span>Fare: Rs{e.price}</span>
                                     <h4>No of seats: {selectedSeat.length}</h4>
                                     <div
                                       style={{

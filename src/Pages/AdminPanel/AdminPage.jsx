@@ -1,7 +1,10 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import "./AdminPage.css";
-
+import { TbLayoutDashboardFilled } from "react-icons/tb";
+import { IoIosPeople } from "react-icons/io";
+import { FaBus } from "react-icons/fa";
+import { FaBusinessTime } from "react-icons/fa6";
 const AdminPage = () => {
   return (
     <div className="admin-page">
@@ -13,22 +16,22 @@ const AdminPage = () => {
               <ul className="sidebar-lists">
                 <li>
                   <NavLink to="dashboard" className="nav-link">
-                    DashBoard
+                    <span>{<TbLayoutDashboardFilled />}</span> DashBoard
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="passengerDetails" className="nav-link">
-                    Passenger Details
+                    <span>{<IoIosPeople />}</span> Passenger Details
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="busDetails" className="nav-link">
-                    Bus Details
+                    <span>{<FaBus />}</span> Bus Details
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="driverDetails" className="nav-link">
-                    Drivers Details
+                    <span>{<FaBusinessTime />}</span> Drivers Details
                   </NavLink>
                 </li>
               </ul>

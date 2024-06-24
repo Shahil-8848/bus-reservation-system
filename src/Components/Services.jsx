@@ -14,7 +14,7 @@ const Services = () => {
       <div className="feature">
         <div className="feature-icon">{<IoTimeSharp />}</div>
         <h4>Real-time Schedules</h4>
-        <p>View up-to-date bus schedules and arrival times.</p>
+        <p>View up-to-date bus schedules & arrival times.</p>
       </div>
       <div className="feature">
         <div className="feature-icon">{<RiSecurePaymentLine />}</div>

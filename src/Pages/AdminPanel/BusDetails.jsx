@@ -37,6 +37,28 @@ const BusDetails = () => {
     }));
   };
 
+  async function handleReset(bus) {
+    try {
+      const reset = await fetch("http://localhost:8081/users/resetSeats", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ rideId: bus.rideID }), // Changed to match backend expectation
+      });
+      const response = await reset.json();
+      if (response.msg === "Reset successful") {
+        // Modified based on the backend response
+        alert("Seats reset successfully.");
+      } else {
+        alert("Something went wrong .DT");
+      }
+    } catch (error) {
+      console.error("Error resetting seats:", error);
+      alert("Failed to reset seats");
+    }
+  }
+
   return (
     <div className="bus-details-container">
       {busDetails.map((bus) => (
@@ -59,6 +81,9 @@ const BusDetails = () => {
               <div className="bus-detail-item">
                 <strong>Features:</strong> {bus.busFeatures}
               </div>
+              <div className="bus-detail-item">
+                <strong>RideID:</strong> {bus.rideID}
+              </div>
             </div>
             <button onClick={() => toggleSeats(bus.rideID)}>
               {showSeats[bus.rideID] ? "Hide Seats" : "Show Seats"}
@@ -70,15 +95,7 @@ const BusDetails = () => {
                 <div className="row-1">
                   <div className="row-1-in">
                     <ul className="ul-tag1">
-                      <span
-                        // style={{
-                        //   fontSize: "25px",
-                        //   marginTop: "120px",
-                        //   paddingTop: "30px",
-                        //   paddingLeft: "19px",
-                        // }}
-                        className="driverSeat"
-                      >
+                      <span className="driverSeat">
                         <PiSteeringWheelFill />
                       </span>
                       {JSON.parse(bus.seatsAvaliable)
@@ -132,7 +149,12 @@ const BusDetails = () => {
                 </div>
               </div>
               <div className="reset-seats-cnt">
-                <button className="reset">
+                <button
+                  className="reset"
+                  onClick={() => {
+                    handleReset(bus);
+                  }}
+                >
                   <span>{<MdOutlineRestartAlt />} </span> Reset seat
                 </button>
                 <br></br>
@@ -147,13 +169,3 @@ const BusDetails = () => {
 };
 
 export default BusDetails;
-//{
-//   JSON.parse(bus.seatsAvaliable).map((seat) => (
-//     <span
-//       key={seat.seatNumber}
-//       className={`seat ${seat.isAvailable ? "available" : "unavailable"}`}
-//     >
-//       {seat.seatNumber}
-//     </span>
-//   ));
-// }
