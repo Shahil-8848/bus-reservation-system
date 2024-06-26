@@ -45,6 +45,7 @@ const Header = () => {
                       src="https://img.lovepik.com/element/45001/3052.png_860.png"
                       alt=""
                     />
+                    <div className="userProfile">Your Info</div>
                   </NavLink>
                 ) : (
                   <NavLink to="/logIn" className="nav-link login-link">

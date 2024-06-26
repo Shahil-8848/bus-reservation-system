@@ -1,6 +1,6 @@
 .features-cnt {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@
 .features-right {
   flex: 1; /* Allow flex to handle width */
   /* padding:20px; */
-  margin-left: 100px;
+  margin-left: 1px;
   background-color: rgb(255, 255, 255);
  /* border-radius:  30% 70% 70% 30% / 30% 30% 70% 70% ; */
   /* display: flex; */

@@ -20,7 +20,7 @@ const SignIn = () => {
     let a = await d.json();
 
     if (a.msg == "ok") {
-      alert("User loggin successful");
+      alert("User signIN successful");
     } else {
       alert(a.msg);
     }

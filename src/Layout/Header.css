@@ -1,10 +1,15 @@
 /* Header.css */
+@font-face {
+  font-family: "Mona";
+  src: url("../Photos/Mona-Sans.ttf");
+}
+
 #navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: #fbfafa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -39,9 +44,10 @@
   
   .nav-link {
     font-size: 27px;
-    font-weight: 400;
+    
     text-decoration: none;
     color: black;
+    font-family:  "Mona";
     /* padding: 5px 10px; */
     transition: color 0.3s;
   }
@@ -105,6 +111,14 @@
     width:40px;
     border-radius: 50%;
     object-fit: cover;
+  }
+  .userProfile{
+    background-color: red;
+    /* display: none; */
+    height: 100px;
+    width:100px;
+    position: absolute;
+   margin-top: 100px;
   }
   /* Existing CSS... */
 /* Existing CSS... */

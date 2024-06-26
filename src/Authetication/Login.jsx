@@ -28,18 +28,21 @@ const Login = ({ setUserRole }) => {
       });
 
       const data = await response.json();
-
-      if (response.ok) {
-        const isAdmin = data.role === "admin";
-        setUserRole(isAdmin ? "admin" : "user");
-        // const Username = data.username;
-        // console.log(username);
-        setPageName(username);
-
-        alert(isAdmin ? "Admin is logged in" : "User logged in successfully");
-
-        // Navigate after setting the user role
-        navigate(isAdmin ? "/admin" : "/");
+      if (data.msg === "ok") {
+        if (data.role === "admin") {
+          alert("Admin logged in successfully");
+          setUserRole("admin");
+          localStorage.setItem("userRole", "admin");
+          localStorage.setItem("username", username);
+          navigate("/admin");
+        } else {
+          alert("User Logged in successfully");
+          setUserRole("user");
+          setPageName(username);
+          localStorage.setItem("userRole", "user");
+          localStorage.setItem("username", username);
+          navigate("/");
+        }
       } else {
         alert(data.msg);
       }
@@ -87,3 +90,20 @@ const Login = ({ setUserRole }) => {
 };
 
 export default Login;
+
+// if (a.msg === "ok") {
+//   alert("User loggin successful");
+// } else {
+//   alert(a.msg);
+// }
+// if (response.ok) {
+//   const isAdmin = data.role === "admin";
+//   setUserRole(isAdmin ? "admin" : "user");
+//   // const Username = data.username;
+//   // console.log(username);
+//   setPageName(username);
+
+//   alert(isAdmin ? "Admin is logged in" : "User logged in successfully");
+
+//   // Navigate after setting the user role
+//   navigate(isAdmin ? "/admin" : "/");

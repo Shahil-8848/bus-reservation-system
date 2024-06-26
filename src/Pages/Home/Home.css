@@ -2,6 +2,10 @@
     font-family: "Gugi-Regular";
     src: url("../../Photos/Gugi-Regular.ttf");
 }
+@font-face {
+  font-family: "Mona";
+  src: url("../../Photos/Mona-Sans.ttf");
+}
 
 .main-container {
     max-width: 100%;
@@ -34,6 +38,7 @@
     font-size: 1.8rem;
     font-weight: 400;
     color: #2b2b2b;
+    font-family:  "Mona";
     margin-bottom: 20px;
 }
 
