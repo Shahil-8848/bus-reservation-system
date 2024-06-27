@@ -150,7 +150,7 @@ const Form = () => {
                 </div>
               </div>
               <div className={style["payment-details"]}>
-                <h1>Choose the payment ways</h1>
+                <h4>Choose the payment ways</h4>
                 <div className={style["pay-mode"]}>
                   <ul>
                     <li>
@@ -178,7 +178,7 @@ const Form = () => {
                     <li>
                       <img
                         style={{
-                          fontSize: "20px",
+                          fontSize: "45px",
                           objectFit: "cover",
                           borderRadius: "50%",
                         }}
@@ -197,7 +197,7 @@ const Form = () => {
                 <h1>Travel-details</h1>
                 <div className={style["travel-details"]}>
                   <div className={style["route-details"]}>
-                    <h2>Route </h2>
+                    <span>Route </span>
                     <div className={style["route-details"]}>
                       <h4>
                         {busDetails.routeFrom} - {busDetails.routeTo}
@@ -231,7 +231,7 @@ const Form = () => {
                 </div>
               </div>
               <div className={style["payment-details-cnt"]}>
-                <div className={style["payment-details"]}>
+                <div className={style["payment-details-cash"]}>
                   <h1>Payment Details</h1>
                   <div className={style["payment-total-cnt"]}>
                     <div className={style["payment-cost"]}>
@@ -249,9 +249,9 @@ const Form = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className={style["reserve-confirm"]}>
-              <button onClick={handlePassengerDetails}>Book Seat</button>
+              <div className={style["reserve-confirm"]}>
+                <button onClick={handlePassengerDetails}>Book Seat</button>
+              </div>
             </div>
           </div>
         </div>

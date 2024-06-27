@@ -1,6 +1,11 @@
+@font-face {
+    font-family: "Mona";
+    src: url("../../Photos/Mona-Sans.ttf");
+  }
 .Form-main{
     width:100%;
     height: 100vh;
+    background-color: white;
    
 }
 .form-cnt{
@@ -33,6 +38,7 @@
 .psg-details h4{
     font-size: 1.5rem;
     font-weight: 400;
+    margin-bottom: 5px;
 }
 .psg-input{
     box-shadow: 0 0 4px 0 hsla(0, 0%, 64%, .5);
@@ -137,6 +143,7 @@
 .psg-contact h4{
     font-size: 1.5rem;
     font-weight: 400;
+    margin-bottom: 5px;
 }
 .psg-contact-input{
     padding:20px;
@@ -173,8 +180,10 @@
     padding:20px;
 } */
 
-.payment-details h1{
+.payment-details h4{
     font-weight: 400;
+    font-size: 1.6rem;
+    padding-top:10px ;
 }
 .pay-mode ul{
 display: flex;
@@ -201,130 +210,190 @@ gap:100px;
 
 .page-right{
     width:40%;
+    height: auto;
 
 }
 .page-right-cnt{
     width:100%;
+   
 }
 .travel-details-cnt{
     padding:20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .travel-details-cnt h1{
     font-weight: 400;
+    font-size: 2rem;
+    
+    
+    font-family: "Mona";
+    margin-bottom: -3px;
 }
 .travel-details{
-    background: linear-gradient(to bottom right, #f4f40c, #f2ff3a);
+    /* background: linear-gradient(to bottom right, #f4f40c, #f2ff3a); */
  width:80%;
+ background-color: #ff9900c5;
  padding:20px;
- border-radius: 20px;
+ border-radius: 10px;
 }
 .route-details{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding:5px;
 }
-.route-details  h2{
+/* .route-details  span{
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
+} */
+.route-details span, h4{
+    font-size: 1.5rem;
+    font-family:"Mona" ;
+    font-weight: 300;
 }
 .time-details{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding:5px;
 }
-.time-details h2{
+/* .time-details h2{
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
+
+} */
+.time-details h2,h4{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Mona";
 }
 .shift-details{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding:5px;
 }
-.shift-details h2{
+.shift-details h2,h4{
     font-size: 1.5rem;
-    font-weight: 400;;
+    font-weight: 300;
+    font-family: "Mona";
 }
 .selected-seats-details{
     display: flex;
     justify-content: space-between;
+    padding:5px
+}
+.selected-seats-details h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Mona";
 }
 .seats-choosen{
     display: flex;
     gap:10px;
-}
-.selected-seats-details h2{
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
+    font-family: "Mona";
+
 }
+
 .seats-choosen span{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Mona";
 }
 .bus-choosen
 {
     display: flex;
     justify-content: space-between;
+    padding: 5px;
 }
 .bus-choosen h2{
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
+    font-family: "Mona";
+}
+.bus-choosen-name h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Mona";
 }
 
 /* 
 payment css */
 
-.payment-details-cnt{
+.payment-details-cash{
     padding:20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-/* .payment-details-cnt{
-    
-} */
+ .payment-details-cash h1{
+    margin-bottom: -1px;
+    font-size: 2rem;
+    font-weight:350;
+    font-family: "Mona";
+} 
 .payment-total-cnt{
-    background: linear-gradient(to bottom right, #FFD700, #FFFF00);
+    /* background: linear-gradient(to bottom right, #FFD700, #FFFF00); */
     width:80%;
+    background-color: #ff9900c5;
     padding:20px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .payment-cost{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px;
+   
 }
 .payment-cost h2{
     font-size: 1.5rem;
-    font-weight: 400;;
+    font-weight: 300;
+    font-family: "Mona";
 }
 .discount{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px;
 }
-.discount h2{
+.discount h2,h3{
     font-size: 1.5rem;
-    font-weight: 400;;
+    font-weight: 300;
+    font-family: "Mona";
 }
 .total-cost{
     display:flex;
     align-items: center;
     justify-content: space-between; 
+    padding: 5px;
 }
-.total-cost h2{
+.total-cost h2,h3{
     font-size: 1.5rem;
-    font-weight: 400;;
+    font-weight: 300;
+    font-family: "Mona";
 }
 .payment-details-cnt h1{
     font-weight: 400;
 }
 .reserve-confirm {
 
-width:100%;
+display: flex;
 align-items: center;
 justify-content: center;
 }
 .reserve-confirm button{
-    width:50%;
+    width:40%;
     padding:15px;
-    transform: translate(40%,0);
+   
     background-color:#60BB47;
     border:none;
     color:white;
