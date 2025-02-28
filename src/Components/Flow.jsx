@@ -43,9 +43,9 @@ const Flow = () => {
                 Choose location
               </option>
               <option value="Birtamode">Birtamode</option>
-              <option value="location3">Damak</option>
-              <option value="location3">Charali</option>
-              <option value="location3">Dhulabari</option>
+              <option value="Damak">Damak</option>
+              <option value="Charali">Charali</option>
+              <option value="Dhulabari">Dhulabari</option>
             </select>
           </div>
         </div>

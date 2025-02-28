@@ -1,4 +1,7 @@
-
+@font-face{
+  font-family: "Mona";
+  src:url("../../Photos/Mona-Sans.ttf") 
+}
 
 .bus-search-page {
     display: flex;
@@ -6,14 +9,15 @@
     align-items: center;
     background-color: #f2f2f2;
     min-height: 100vh;
-font-family: fantasy;
+
+font-family: "Mona";
   }
   
   .bus-search-main {
     padding: 30px;
     width: 80%;
  
-
+    font-family: "Mona";
   }
 
   
@@ -21,46 +25,54 @@ font-family: fantasy;
     padding:30px;
     box-shadow: 0 0 4px 0 hsla(0, 0%, 64%, .5);
     background-color: #ae1400;
+    font-family: "Mona";
   }
   .route-heading{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: "Mona";
   }
   .route-to-from{
     display: flex;
-   
+    font-family: "Mona";
     gap:15px;
 
   }
   .route-to-from h4{
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: 300;font-family: "Mona";
   }
   .route-to-from span{
     font-size: 1.7rem;
+    font-family: "Mona";
     color:rgb(119, 118, 118)
   }
   .route-heading h4 span{
     font-size: 1.5rem;
     font-weight: 200;
+    font-family: "Mona";
   }
   .route-date-cnt{
+    font-family: "Mona";
   align-items: center;
   }
   .route-date{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Mona";
     gap:15px;
   }
   .route-date span{
     font-size: 1.7rem;
+    font-family: "Mona";
     color:rgb(119, 118, 118)
   }
   .route-date h3{
     font-size: 1rem;
     font-weight: 400;
+    font-family: "Mona";
   }
   .bus-search-container{
     padding:20px;
@@ -75,13 +87,15 @@ font-family: fantasy;
     padding: 0;
     margin: 0;
     list-style: none;
+    font-family: "Mona";
   }
   
   .heading-list ul li {
     flex:0.5;
     font-size: 1.3rem;
     font-weight: 400;
-    color:#fff
+    color:#fff;
+    font-family: "Mona";
   }
   
 
@@ -99,12 +113,14 @@ font-family: fantasy;
     border-radius:5px ;
     list-style: none;
     margin-bottom: 20px;
+    font-family: "Mona";
   }
   .bus-list:hover{
     border:1px solid rgb(7, 131, 129);
   }
   .bus-items{
     padding: 20px;
+    font-family: "Mona";
   }
   
   .row-one {
@@ -130,7 +146,11 @@ font-family: fantasy;
   .duo h3{
     font-size: 1.1rem;
     font-weight: 500;
+    font-family: "Mona";
     color: blue;
+  }
+  .stamp{
+    font-family:"Mona"
   }
 .ratings{
   display: flex;
@@ -208,6 +228,7 @@ font-family: fantasy;
     display:flex;
     align-items: center;
     position: relative;
+    font-family: "Mona";
    
   }
   .bus-seat-container h1{
@@ -226,7 +247,7 @@ font-family: fantasy;
     position: fixed;
     top: 50%;
     left: 50%;
-
+    font-family: "Mona";
     background-color: #f2f2f2;
     transform: translate(-50%, -50%);
     /* background: rgb(245, 237, 237); */
@@ -234,10 +255,10 @@ font-family: fantasy;
     border: 1px solid #9f9f9f;
     z-index: 9999;
     /* height: 80vh; */
-    width:45%;
+    width:50%;
   }
   .bus-dialog form{
-    width:100%;
+    width:100%;font-family: "Mona";
     height:70vh;
   }
   .search-heading-cnt{
@@ -317,6 +338,7 @@ width:300px
   border-radius: 5px;
   margin-bottom: 3px;
   background-color: rgb(111, 123, 134);
+  cursor: pointer;
 }
 .seats-window ul li:hover{
   background-color:rgb(158, 5, 5);
@@ -333,6 +355,7 @@ width:300px
   text-align: center;
   margin-bottom: 3px;
   background-color: rgb(111, 123, 134);
+  cursor: pointer;
 }
 .seats-no-window li:hover{
   background-color:rgb(164, 0, 0);
@@ -340,12 +363,13 @@ width:300px
 }
 .seats-single ul li{
   padding:10px;
-  width:33px;
+  width:35px;
   border-radius: 5px;
   margin-bottom: 6px;
   text-align: center;
   margin-right: 5px;
   background-color: rgb(111, 123, 134);
+  cursor: pointer;
 }
 .seats-single li:hover{
   background-color:rgb(158, 10, 10);
@@ -359,9 +383,14 @@ margin-right: 25px;
 }
 .bus-avail-info{
   display: flex;
+  align-items: center;
   justify-content: center;
   gap:10px;
+  font-size: 1rem;
 }
+/* .bus-avail-info div{
+   width:80px;
+} */
 
 
 .seats-avail{
@@ -370,9 +399,14 @@ margin-right: 25px;
   /* justify-content: center;
   align-items: center; */
   gap:5px;
+ 
 }
 .seats-avail span{
-  width:10px;
+  width:5px;
+  font-size: 1rem;
+}
+.seats-avail h4{
+  font-size: 1rem;
 }
 .seats-reserved {
   display:flex;
@@ -380,16 +414,21 @@ margin-right: 25px;
 
 }
 .seats-reserved span{
-  width:10px;
+  width:5px;
+}
+.seats-reserved h4{
+  font-size: 1rem;
 }
 .seats-holded{
   display:flex;
   gap:5px;
 }
 .seats-holded span{
-  width:10px;
+  width:5px;
 }
-
+.seats-holded h4 {
+  font-size: 1rem;
+}
 
 .box-left{
   padding:20px;

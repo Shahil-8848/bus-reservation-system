@@ -6,7 +6,6 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { PiSteeringWheelFill } from "react-icons/pi";
 import Footer from "../../Layout/Footer";
 import { TbClockHour10 } from "react-icons/tb";
-
 import { IoMdStar } from "react-icons/io";
 import { BusContext } from "../../BusContext";
 
@@ -18,14 +17,13 @@ const BusSearch = () => {
   let toDestination = searchParams.get("to");
   let selectedDate = searchParams.get("date");
   const navigate = useNavigate();
-
   let [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showDialog, setShowDialog] = useState(null);
   const [selectedSeat, setSelectedSeat] = useState([]);
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(0); // Initial price set to 0
 
-  function handleSelectedSeat(seat) {
+  function handleSelectedSeat(seat, seatPrice) {
     const isSeatSelected = selectedSeat.some(
       (selected) => selected.seatNumber === seat.seatNumber
     );
@@ -34,10 +32,10 @@ const BusSearch = () => {
         (selected) => selected.seatNumber !== seat.seatNumber
       );
       setSelectedSeat(updatedSelectedSeat);
-      setPrice((price) => price - 300);
+      setPrice((prevPrice) => prevPrice - seatPrice);
     } else {
       setSelectedSeat([...selectedSeat, seat]);
-      setPrice((price) => price + 300);
+      setPrice((prevPrice) => prevPrice + seatPrice);
     }
   }
 
@@ -80,7 +78,10 @@ const BusSearch = () => {
     getBooking();
   }, [fromDest, toDestination]);
 
-  const openDialog = (rideID) => {
+  const openDialog = (rideID, busPrice) => {
+    if (showDialog) return;
+    setSelectedSeat([]);
+    setPrice(0); // Reset the price to 0 when opening the dialog
     setShowDialog(rideID);
   };
 
@@ -160,7 +161,10 @@ const BusSearch = () => {
                     <li className={style["bus-list"]}>
                       <div className={style["bus-items"]}>
                         <div className={style["row-one"]}>
-                          <div style={{ display: "block", color: "green" }}>
+                          <div
+                            className={style["stamp"]}
+                            style={{ display: "block", color: "green" }}
+                          >
                             A{e.rideID}
                           </div>
                           <div
@@ -178,16 +182,31 @@ const BusSearch = () => {
                               </p>
                             </div>
                           </div>
-                          <div style={{ display: "block", width: "80px" }}>
+                          <div
+                            className={style["stamp"]}
+                            style={{ display: "block", width: "80px" }}
+                          >
                             {e.busFeatures}
                           </div>
-                          <div style={{ display: "block" }}>{e.shift}</div>
-                          <div style={{ display: "block" }}>{e.rideTime}</div>
+                          <div
+                            className={style["stamp"]}
+                            style={{ display: "block" }}
+                          >
+                            {e.shift}
+                          </div>
+                          <div
+                            className={style["stamp"]}
+                            style={{ display: "block" }}
+                          >
+                            {e.rideTime}
+                          </div>
                           <div
                             style={{ display: "block" }}
                             className={style["view-seats"]}
                           >
-                            <button onClick={() => openDialog(e.rideID)}>
+                            <button
+                              onClick={() => openDialog(e.rideID, e.price)}
+                            >
                               View seats
                             </button>
                           </div>
@@ -230,7 +249,10 @@ const BusSearch = () => {
                                                 }}
                                                 onClick={() => {
                                                   if (!seat.isAvailable) return;
-                                                  handleSelectedSeat(seat);
+                                                  handleSelectedSeat(
+                                                    seat,
+                                                    e.price
+                                                  );
                                                 }}
                                               >
                                                 {seat.seatNumber}
@@ -260,7 +282,10 @@ const BusSearch = () => {
                                                 }}
                                                 onClick={() => {
                                                   if (!seat.isAvailable) return;
-                                                  handleSelectedSeat(seat);
+                                                  handleSelectedSeat(
+                                                    seat,
+                                                    e.price
+                                                  );
                                                 }}
                                               >
                                                 {seat.seatNumber}
@@ -302,7 +327,10 @@ const BusSearch = () => {
                                               }}
                                               onClick={() => {
                                                 if (!seat.isAvailable) return;
-                                                handleSelectedSeat(seat);
+                                                handleSelectedSeat(
+                                                  seat,
+                                                  e.price
+                                                );
                                               }}
                                             >
                                               {seat.seatNumber}
@@ -316,9 +344,7 @@ const BusSearch = () => {
                                       <div className={style["seats-avail"]}>
                                         <span
                                           style={{ backgroundColor: "green" }}
-                                        >
-                                          .
-                                        </span>
+                                        ></span>
                                         <h4>Available</h4>
                                       </div>
                                       <div className={style["seats-reserved"]}>
@@ -341,7 +367,7 @@ const BusSearch = () => {
                                 <div className={style["pricing-details"]}>
                                   <div className={style["box-seats-pricing"]}>
                                     <h2>{e.busType}</h2>
-                                    <span>Fare: Rs{e.price}</span>
+                                    <span>Fare: Rs{price}</span>
                                     <h4>No of seats: {selectedSeat.length}</h4>
                                     <div
                                       style={{

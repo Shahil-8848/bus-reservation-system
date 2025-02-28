@@ -26,7 +26,7 @@ const BusSearch = ({ setSelectedBus, setSeatPrice }) => {
   // const handleContinue = () => {
   //   navigate("/passenger-details", { state: { selectedSeat } });
   // };
-
+  console.log("let go");
   function handleSelectedSeat(seat) {
     const isSeatSelected = selectedSeat.some(
       (selected) => selected.seatNumber === seat.seatNumber

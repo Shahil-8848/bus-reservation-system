@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MdDelete } from "react-icons/md";
+import { AiFillDelete } from "react-icons/ai";
 import "./Booking.css";
 // import AdminPage from "./AdminPage";
 // import { Outlet } from "react-router-dom";
@@ -76,7 +76,7 @@ const Booking = () => {
                 className="delete-btn"
                 onClick={() => handlePsgDelete(passenger.id)}
               >
-                <MdDelete />
+                <AiFillDelete />
               </button>
               <div className="detailname">
                 <h5>{passenger.passenger_name}</h5>

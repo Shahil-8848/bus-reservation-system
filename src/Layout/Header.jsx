@@ -27,15 +27,19 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/about" className="nav-link">
-                About
-              </NavLink>
+            <li
+              className="nav-link"
+              onClick={(e) => alert("Rijim is bus provider!")}
+            >
+              About
             </li>
-            <li>
-              <NavLink to="/contact" className="nav-link">
-                Contact
-              </NavLink>
+            <li
+              onClick={(e) =>
+                alert("contact us at 9708989678. Birtamode jhapa")
+              }
+              className="nav-link"
+            >
+              Contact
             </li>
             <li>
               <div className="login-div">
@@ -45,7 +49,7 @@ const Header = () => {
                       src="https://img.lovepik.com/element/45001/3052.png_860.png"
                       alt=""
                     />
-                    <div className="userProfile">Your Info</div>
+                    {/* <div className="userProfile">Your Info</div> */}
                   </NavLink>
                 ) : (
                   <NavLink to="/logIn" className="nav-link login-link">

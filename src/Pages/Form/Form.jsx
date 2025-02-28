@@ -69,7 +69,11 @@ const Form = () => {
                     <input
                       value={psgName}
                       onChange={(e) => {
-                        setPsgName(e.target.value);
+                        if (e.target.value === ".") {
+                          alert("invalid character . ");
+                        } else {
+                          setPsgName(e.target.value);
+                        }
                       }}
                     ></input>
                   </div>

@@ -4,13 +4,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background: linear-gradient(45deg, #F59597, #FFA07A); */
+
+
 }
 
 .route-container {
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: #3e3e3e;
+    background: url("../Photos/scene1.jpeg.jpeg");
+    background-size: cover;
+    object-fit: cover;
     padding: 30px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;

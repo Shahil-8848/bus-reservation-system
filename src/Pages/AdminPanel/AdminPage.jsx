@@ -36,7 +36,7 @@ const AdminPage = () => {
                   <NavLink to="passengerDetails" className="nav-link">
                     <div className="sidebar-heads">
                       <span>{<FaBus />}</span>
-                      <h4> Bus Details</h4>
+                      <h4> Passenger Details</h4>
                     </div>
                   </NavLink>
                 </li>
@@ -44,7 +44,7 @@ const AdminPage = () => {
                   <NavLink to="busDetails" className="nav-link">
                     <div className="sidebar-heads">
                       <span>{<FaBusinessTime />}</span>
-                      <h4> Driver Details</h4>
+                      <h4> Bus Details</h4>
                     </div>
                   </NavLink>
                 </li>
@@ -52,7 +52,7 @@ const AdminPage = () => {
                   <NavLink to="driverDetails" className="nav-link">
                     <div className="sidebar-heads">
                       <span>{<IoIosPeople />}</span>
-                      <h4> Passenger Details</h4>
+                      <h4> Driver Details</h4>
                     </div>
                   </NavLink>
                 </li>
